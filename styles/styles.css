@@ -15,8 +15,8 @@ textarea                       { vertical-align:top; }
 input[type=submit]             { cursor:pointer; }
 img, fieldset                  { border:0; }
 table                          { border-collapse:collapse; border-spacing:0; }
-a:link, a:visited              { font:12px Tahoma, sans-serif; color:#000; text-decoration:underline; }
-a:hover                        { text-decoration:none; }
+a:link, a:visited              { font:12px Tahoma, sans-serif; color:#000; text-decoration:none; }
+a:hover                        { text-decoration:underline; }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------DEFAULT CLASSES------------------------------*/
 /*----------------------------------------------------------------------------------*/
@@ -38,11 +38,47 @@ a:hover                        { text-decoration:none; }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------WRAPPER--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
-
+.wrapper{
+    margin: 0 auto;
+    width: 1200px;
+}
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------HEADER---------------------------------------*/
 /*----------------------------------------------------------------------------------*/
-
+.header{
+    position: relative;
+}
+    .top-header{
+        position: relative;
+        height: 45px;
+        z-index: 10;
+        background-color: rgba(67, 117,142, 0.8);
+    }
+        .logo{
+            float: left;
+        }
+        .main-nav ul{
+            float: right;
+            margin-right: 140px;
+        }
+            .main-nav li{
+                display: inline-block;
+                padding: 0 35px;
+            }
+            .main-nav li:hover{
+                background-color: #386B87;
+            }
+                .main-nav a{
+                    font-family: Myriad Pro;
+                    font-size: 17px;
+                    color: #ffffff;
+                    line-height: 45px;
+                }
+    .slider-header{
+        position: relative;
+        top: -45px;
+        z-index: 1;
+    }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------NAV------------------------------------------*/
 /*----------------------------------------------------------------------------------*/
@@ -54,3 +90,28 @@ a:hover                        { text-decoration:none; }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------FOOTER---------------------------------------*/
 /*----------------------------------------------------------------------------------*/
+.footer{
+    overflow: hidden;
+    height: 190px;
+    background-color: rgba(67, 117,142, 0.8);
+}
+    .contact-form{
+        margin-top: 20px;
+        margin-left: 120px;
+    }
+        .mail-text{
+            width: 285px;
+            height: 80px;
+            resize: none;
+        }
+        .input-style{
+            margin-top: 10px;
+            width: 200px;
+            height: 35px;
+        }
+        .btn-send{
+            margin-top: 10px;
+            margin-left: 3px;
+            height: 35px;
+            width: 75px;
+        }
