@@ -62,23 +62,7 @@ a:hover                        { text-decoration:none; color: #FACA3D; }
         .logo{
             float: left;
         }
-        .main-nav ul{
-            float: right;
-            margin-right: 140px;
-        }
-            .main-nav li{
-                display: inline-block;
-                padding: 0 35px;
-            }
-            .main-nav li:hover{
-                background-color: #386B87;
-            }
-                .main-nav a{
-                    font-family: Myriad Pro;
-                    font-size: 17px;
-                    color: #ffffff;
-                    line-height: 45px;
-                }
+
     .slider-header{
         position: relative;
         top: -45px;
@@ -119,49 +103,116 @@ a:hover                        { text-decoration:none; color: #FACA3D; }
                 }
                 .slider-pagination li.active a:hover {
                 }
+                    .sub-menu{
+                        display: none;
+                    }
 
+.slider-title{
+    margin: 0 auto 60px;
+    font-family: "Myriad Pro";
+    text-align: center;
+    color: #ffffff;
+}
+    .slider-title h2{
+        font-size: 60px;
+    }
+    .slider-title p{
+        font-size: 30px;
+    }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------NAV------------------------------------------*/
 /*----------------------------------------------------------------------------------*/
-
+.main-nav ul{
+    float: right;
+    margin-right: 140px;
+}
+    .main-nav li{
+        display: inline-block;
+        padding: 0 35px;
+    }
+    .main-nav li:hover{
+        background-color: #386B87;
+    }
+        .main-nav a{
+            font-family: Myriad Pro;
+            font-size: 14px;
+            color: #ffffff;
+            line-height: 45px;
+            text-transform: uppercase;
+        }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------CONTENT--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 .anather-title{
+    margin: 50px auto 0;
     height: 315px;
+    text-align: center;
 }
+    .anather-title header h2{
+        width: 690px;
+        font-size: 18px;
+        text-transform: uppercase;
+        color: #334A57;
+    }
+    .anather-title p.description{
+        width: 690px;
+        font-size: 24px;
+        color: #263F4C;
+    }
+
+    .anather-title p{
+        width: 690px;
+        font-size: 18px;
+        color: #263F4C;
+    }
 
 .video-box{
-    background-color: rgba(67, 117,142, 1); ;
+    color: #ffffff;
+    background-color: rgba(67, 117,142, 1);
 }
-    .video-box li{
-        display: inline-block;
+    .video-box ul{
         text-align: center;
     }
-        .video-box video{
-            width: 490px;
-            height: 340px;
+        .video-box li{
+            margin: 0 10px;
+            display: inline-block;
+            text-align: center;
         }
-        .video-box p{
-            width: 350px;
-        }
-/*----------------------------------------------------------------------------------*/
-/*-------------------------------------FOOTER---------------------------------------*/
-/*----------------------------------------------------------------------------------*/
-.footer{
+            .video-box h3{
+                margin-top: 50px;
+                font-size: 30px;
+            }
+            .video-box video{
+                margin: 20px 0;
+                width: 490px;
+                /*height: 340px;*/
+            }
+            .video-box p{
+                margin: 0 auto 50px;
+                width: 350px;
+                font-size: 16px;
+            }
+
+.map{
     position: relative;
     overflow: hidden;
     height: 560px;
-    background-image: url("../images/foter_bg_map.jpg");
 }
+ img.bg-map{
+     position: relative;
+     width: 1200px;
+     height: 560px;
+     z-index: 2;
+ }
     .contact-form{
-        position: relative;
+        position: absolute;
         top: 370px;
         padding-top: 20px;
         padding-left: 120px;
         height: 190px;
         width: 100%;
         background-color: rgba(67, 117,142, 0.9);
+        z-index: 5;
     }
         .mail-text{
             width: 285px;
@@ -179,3 +230,6 @@ a:hover                        { text-decoration:none; color: #FACA3D; }
             height: 35px;
             width: 75px;
         }
+/*----------------------------------------------------------------------------------*/
+/*-------------------------------------FOOTER---------------------------------------*/
+/*----------------------------------------------------------------------------------*/
