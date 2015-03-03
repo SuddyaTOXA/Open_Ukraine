@@ -11,61 +11,6 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,700,300,400' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
     <link rel="stylesheet" type="text/css" href="styles/responsiveslides.css">
-
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
-    <!--
-        You need to include this script on any page that has a Google Map.
-        When using Google Maps on your own site you MUST signup for your own API key at:
-            https://developers.google.com/maps/documentation/javascript/tutorial#api_key
-        After your sign up replace the key in the URL below or paste in the new script tag that Google provides.
-    -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>
-    <script>
-        function initialize() {
-            var mapCanvas = document.getElementById('map_canvas');
-            var mapOptions = {
-                center: new google.maps.LatLng(48.4955134,32.3728021),
-                zoom: 6,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            }
-
-            // Get the HTML DOM element that will contain your map
-            // We are using a div with id="map" seen below in the <body>
-            var mapElement = document.getElementById('map');
-
-            // Create the Google Map using out element and options defined above
-            var map = new google.maps.Map(mapElement, mapOptions);
-
-            setMarkers(map, places);
-        }
-        google.maps.event.addDomListener(window, 'load', initialize);
-
-        function setMarkers(map, locations) {
-            //Определяем область показа маркеров
-            var latlngbounds = new google.maps.LatLngBounds();
-
-            var image = new google.maps.MarkerImage( '',
-                    new google.maps.Size(46,66), // размеры иконок
-                    new google.maps.Point(0,0),
-                    new google.maps.Point(7,36)
-            );
-
-            for (var i = 0; i < places.length; i++) {
-                var myLatLng = new google.maps.LatLng(locations[i][1], locations[i][2]);
-                //Добавляем координаты маркера в область
-                latlngbounds.extend(myLatLng);
-                var marker = new google.maps.Marker({
-                    position: myLatLng,
-                    map: map,
-                    icon: image,
-                    title: locations[i][0]
-                });
-            }
-        }
-        var places = [
-            ['Украина',48.4955134,32.3728021]
-        ];
-    </script>
 </head>
 
 <body class="home">
@@ -189,7 +134,7 @@
                     <h2>Another Title</h2>
                 </header>
 
-                <p class="descrip">
+                <p class="description">
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
                     sed diam nonummy nibh euismod tincidunt ut laoreet.
                 </p>
@@ -235,18 +180,20 @@
             <div class="wrap-form">
                 <div class="wrap-box">
                     <form class="feedback-form" name="feedback" method="post">
-                        <legend>Get in touch</legend>
+                        <fieldset>
+                            <legend>Get in touch</legend>
 
-                        <ul class="clear">
-                            <li>
-                                <textarea class="mail-text" name="text" placeholder="Your message"></textarea>
-                            </li>
+                            <ul class="clear">
+                                <li>
+                                    <textarea class="input form-msg" name="text" placeholder="Your message"></textarea>
+                                </li>
 
-                            <li>
-                                <input class="input-style" type="email" name="email" placeholder="Email">
-                                <button class="btn-send feedback" type="submit">Send</button>
-                            </li>
-                        </ul>
+                                <li>
+                                    <input class="input form-email" type="email" name="email" placeholder="Email">
+                                    <button class="input btn-send feedback" type="submit">Send</button>
+                                </li>
+                            </ul>
+                        </fieldset>
                     </form>
                 </div>
             </div>
@@ -254,7 +201,63 @@
     </div>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!--[if lt IE 10]><script src="js/jquery.placeholder.js"></script><![endif]-->
     <script src="js/responsiveslides.min.js"></script>
     <script src="js/commonJS.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <!--
+        You need to include this script on any page that has a Google Map.
+        When using Google Maps on your own site you MUST signup for your own API key at:
+            https://developers.google.com/maps/documentation/javascript/tutorial#api_key
+        After your sign up replace the key in the URL below or paste in the new script tag that Google provides.
+    -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASm3CwaK9qtcZEWYa-iQwHaGi3gcosAJc&sensor=false"></script>
+    <script>
+        function initialize() {
+            var mapCanvas = document.getElementById('map_canvas');
+            var mapOptions = {
+                center: new google.maps.LatLng(48.4955134,32.3728021),
+                zoom: 6,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+
+            // Get the HTML DOM element that will contain your map
+            // We are using a div with id="map" seen below in the <body>
+            var mapElement = document.getElementById('map');
+
+            // Create the Google Map using out element and options defined above
+            var map = new google.maps.Map(mapElement, mapOptions);
+
+            setMarkers(map, places);
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+
+        function setMarkers(map, locations) {
+            //Определяем область показа маркеров
+            var latlngbounds = new google.maps.LatLngBounds();
+
+            var image = new google.maps.MarkerImage( '',
+                    new google.maps.Size(46,66), // размеры иконок
+                    new google.maps.Point(0,0),
+                    new google.maps.Point(7,36)
+            );
+
+            for (var i = 0; i < places.length; i++) {
+                var myLatLng = new google.maps.LatLng(locations[i][1], locations[i][2]);
+                //Добавляем координаты маркера в область
+                latlngbounds.extend(myLatLng);
+                var marker = new google.maps.Marker({
+                    position: myLatLng,
+                    map: map,
+                    icon: image,
+                    title: locations[i][0]
+                });
+            }
+        }
+        var places = [
+            ['Украина',48.4955134,32.3728021]
+        ];
+    </script>
 </body>
 </html>

@@ -35,6 +35,24 @@ a:hover                        { text-decoration:none;}
 .align-l                       { text-align:left !important; }
 .align-c                       { text-align:center !important; }
 .clear                         { clear:both; }
+
+/* stylization of placeholder */
+input::-webkit-input-placeholder        {opacity: 1; transition: opacity 0.3s ease;}
+input::-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+input:-moz-placeholder                  {opacity: 1; transition: opacity 0.3s ease;}
+input:-ms-input-placeholder             {opacity: 1; transition: opacity 0.3s ease;}
+input:focus::-webkit-input-placeholder  {opacity: 0; transition: opacity 0.3s ease;}
+input:focus::-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-moz-placeholder            {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-ms-input-placeholder       {opacity: 0; transition: opacity 0.3s ease;}
+textarea::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+textarea::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+textarea:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+textarea:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+textarea:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+textarea:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+textarea:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------WRAPPER--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
@@ -163,7 +181,7 @@ main {
             text-transform: uppercase;
             color: #334A57;
         }
-        .preheader-box .descrip {
+        .preheader-box .description {
             margin-bottom: 16px;
             font-size: 24px;
         }
@@ -204,12 +222,6 @@ main {
                 font-style: italic;
                 line-height: 19px;
             }
-
-.map{
-    position: relative;
-    overflow: hidden;
-    height: 560px;
-}
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------FOOTER---------------------------------------*/
 /*----------------------------------------------------------------------------------*/
@@ -226,8 +238,7 @@ main {
     .wrap-form {
         position: absolute;
         top: 370px;
-        padding-top: 20px;
-        height: 170px;
+        padding: 6px 0 17px;
         width: 100%;
         background-color: rgba(34, 92, 123, 0.9);
         z-index: 5;
@@ -235,19 +246,42 @@ main {
         .feedback-form {
             margin-left: 20px;
         }
-            .mail-text {
-                width: 285px;
-                height: 80px;
-                resize: none;
+            .feedback-form legend {
+                margin-left: 10px;
+                font: 300 14px 'Open Sans', sans-serif;
+                line-height: 34px;
+                color: #FFFFFF;
             }
-            .input-style {
-                margin-top: 10px;
-                width: 200px;
-                height: 35px;
-            }
-            .btn-send {
-                margin-top: 10px;
-                margin-left: 3px;
-                height: 35px;
-                width: 75px;
-            }
+                .feedback-form li {
+                    margin-bottom: 9px;
+                }
+                    .input {
+                        padding: 0 10px;
+                        border: 1px solid #88A4B6;
+                        background: none;
+                        font: 400 14px 'Open Sans', sans-serif;
+                        color: #ffffff;
+                        -webkit-border-radius: 1px;
+                        -moz-border-radius: 1px;
+                        border-radius: 1px;
+                    }
+                    .form-msg {
+                        width: 266px;
+                        height: 76px;
+                        padding: 5px 10px;
+                        resize: none;
+                    }
+                    .form-email {
+                        width: 180px;
+                        margin-right: 6px;
+                        line-height: 33px;
+                    }
+                    .btn-send {
+                        width: 76px;
+                        border-color: #FFB706;
+                        text-transform: uppercase;
+                        font: 400 14px 'Montserrat', 'Open Sans', sans-serif;
+                        line-height: 33px;
+                        color: #FFB706;
+                        cursor: pointer;
+                    }
