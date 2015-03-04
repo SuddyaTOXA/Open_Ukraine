@@ -2,7 +2,7 @@
 /*------------------------------RESET DEFAULT STYLES--------------------------------*/
 /*----------------------------------------------------------------------------------*/
 html,body                       { width:100%; height:100%; }
-body                            { padding:0; margin:0; font:16px 'Open Sans', sans-serif; background:#fff; color:#444444; }
+body                            { padding:0; margin:0; font:400 16px 'Open Sans', sans-serif; background:#fff; color:#444444; }
 div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,input,textarea {
 	padding:0;
 	margin:0;
@@ -66,6 +66,7 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
         max-width: 1000px;
         width: 100%;
         margin: 0 auto;
+        box-sizing: border-box;
     }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------HEADER---------------------------------------*/
@@ -93,6 +94,9 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
     }
         .logo {
             float: left;
+            overflow: hidden;
+            width: 100px;
+            height: 47px;
         }
             .logo a {
                 text-decoration: none;
@@ -119,7 +123,6 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
                 margin: 0 auto;
             }
             .slide-description h2 {
-                text-transform: capitalize;
                 font-weight: 400;
                 font-size: 60px;
                 line-height: 78px;
@@ -152,14 +155,14 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
             -moz-transition-duration: 0.2s;
             transition-duration: 0.2s;
         }
-        .main-nav > .active > a,
-        .main-nav > .active > span,
+        .main-nav .active > a,
+        .main-nav .active > span,
         .main-nav li a:hover {
             background-color: rgba(29, 86, 118, 1);
             color: #FACA3D;
         }
-        .home .main-nav > .active > a,
-        .home .main-nav > .active > span,
+        .home .main-nav .active > a,
+        .home .main-nav .active > span,
         .home .main-nav li > a:hover {
             background-color: rgba(29, 86, 118, 0.8);
         }
@@ -183,6 +186,9 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
             -webkit-border-radius: 4px;
             -moz-border-radius: 4px;
             border-radius: 4px;
+        }
+        .main-nav li:last-child:hover .sub-menu {
+            right: 0;
         }
             .main-nav .sub-menu li {
                 float: none;
@@ -232,7 +238,7 @@ main {
         .preheader-box header {
             margin-bottom: 12px;
         }
-            .preheader-box header h2 {
+            .preheader-box h2 {
                 font: 700 18px 'Montserrat', 'Open Sans', sans-serif;
                 text-transform: uppercase;
                 color: #334A57;
@@ -278,6 +284,124 @@ main {
                     font-style: italic;
                     line-height: 19px;
                 }
+/*--------------------------------------INNER---------------------------------------*/
+.wrap-page-title {
+    padding: 42px 0 38px;
+    background: #225C7B;
+    color: #ffffff;
+    text-align: center;
+}
+    .wrap-page-title h1 {
+        text-transform: capitalize;
+        font: 400 42px 'Montserrat', 'Open Sans', sans-serif;
+        line-height: 40px;
+    }
+    .wrap-page-title p {
+        font: 400 22px 'Montserrat', 'Open Sans', sans-serif;
+    }
+
+.where-list {
+
+}
+    .where-list li {
+        overflow: hidden;
+        width: 100%;
+        clear: both;
+        background: #ffffff;
+    }
+    .where-list li.even {
+        background: #225C7B;
+        color: #ffffff;
+    }
+        .where-img {
+            float: left;
+            max-width: 600px;
+            width: 100%;
+        }
+        .where-list .even .where-img {
+            float: right;
+        }
+        .where-text {
+            overflow: hidden;
+            padding: 55px 0;
+        }
+            .where-text h2 {
+                max-width: 442px;
+                width: 100%;
+                margin: 0 0 8px 40px;
+                font: 400 24px 'Montserrat', 'Open Sans', sans-serif;
+            }
+            .where-list .even h2 {
+                float: right;
+                margin: 0 40px 8px 0;
+            }
+
+            .where-text p {
+                max-width: 442px;
+                width: 100%;
+                margin: 0 0 19px 40px;
+                line-height: 19px;
+            }
+            .where-list .even p {
+                float: right;
+                margin: 0 40px 19px 0;
+            }
+            .where-text p:last-of-type {
+                margin-bottom: 0;
+            }
+                a.read-more {
+                    font-weight: 700;
+                    text-decoration: underline;
+                }
+                .where-list .even a.read-more {
+                    color: #ffffff;
+                }
+                    a.read-more:hover {
+                        text-decoration: none;
+                    }
+
+.how-list {
+
+}
+    .how-list > li {
+        clear: both;
+        padding: 45px 0 70px;
+    }
+    .how-list li.even {
+        background: #225C7B;
+        color: #ffffff;
+    }
+        .how-list li .wrap-box {
+            padding: 0 20px;
+        }
+            .how-list h2 {
+                margin-bottom: 6px;
+                font: 400 24px 'Montserrat', 'Open Sans', sans-serif;
+            }
+            .how-list p {
+                max-width: 610px;
+                width: 100%;
+                margin-bottom: 15px;
+                line-height: 19px;
+            }
+
+            .list-three-columns {
+                overflow: hidden;
+                margin-top: 36px;
+            }
+                .list-three-columns li {
+                    float: left;
+                    width: 311px;
+                    margin-left: 13px;
+                }
+                .list-three-columns li:first-child {
+                    margin-left: 0;
+                }
+                    .list-three-columns img {
+                        width: 311px;
+                        height: 223px;
+                        cursor: pointer;
+                    }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------FOOTER---------------------------------------*/
 /*----------------------------------------------------------------------------------*/
