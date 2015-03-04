@@ -187,9 +187,6 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
             -moz-border-radius: 4px;
             border-radius: 4px;
         }
-        .main-nav li:last-child:hover .sub-menu {
-            right: 0;
-        }
             .main-nav .sub-menu li {
                 float: none;
                 border-top: 1px solid #225C7B;
@@ -286,23 +283,34 @@ main {
                 }
 /*--------------------------------------INNER---------------------------------------*/
 .wrap-page-title {
-    padding: 42px 0 38px;
+    padding: 40px 0;
     background: #225C7B;
     color: #ffffff;
     text-align: center;
 }
     .wrap-page-title h1 {
-        text-transform: capitalize;
+        max-width: 700px;
+        width: 100%;
+        margin: 0 auto;
         font: 400 42px 'Montserrat', 'Open Sans', sans-serif;
         line-height: 40px;
     }
-    .wrap-page-title p {
-        font: 400 22px 'Montserrat', 'Open Sans', sans-serif;
+    .join .wrap-page-title h1 {
+        margin-bottom: 19px;
     }
 
-.where-list {
+    .wrap-page-title p {
+        max-width: 620px;
+        width: 100%;
+        margin: 0 auto;
+        font: 400 22px 'Montserrat', 'Open Sans', sans-serif;
+    }
+    .join .wrap-page-title p {
+        font: 400 16px 'Open Sans', sans-serif;
+        line-height: 19px;
+    }
 
-}
+
     .where-list li {
         overflow: hidden;
         width: 100%;
@@ -360,25 +368,23 @@ main {
                         text-decoration: none;
                     }
 
-.how-list {
 
-}
-    .how-list > li {
+    .block-list > li {
         clear: both;
         padding: 45px 0 70px;
     }
-    .how-list li.even {
+    .block-list li.even {
         background: #225C7B;
         color: #ffffff;
     }
-        .how-list li .wrap-box {
+        .block-list li .wrap-box {
             padding: 0 20px;
         }
-            .how-list h2 {
+            .block-list h2 {
                 margin-bottom: 6px;
                 font: 400 24px 'Montserrat', 'Open Sans', sans-serif;
             }
-            .how-list p {
+            .block-list p {
                 max-width: 610px;
                 width: 100%;
                 margin-bottom: 15px;
