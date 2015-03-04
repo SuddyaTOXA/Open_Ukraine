@@ -37,18 +37,18 @@ a:hover                        { text-decoration:none;}
 .clear                         { clear:both; }
 
 /* stylization of placeholder */
-input::-webkit-input-placeholder        {opacity: 1; transition: opacity 0.3s ease;}
-input::-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
-input:-moz-placeholder                  {opacity: 1; transition: opacity 0.3s ease;}
-input:-ms-input-placeholder             {opacity: 1; transition: opacity 0.3s ease;}
+input::-webkit-input-placeholder        {font-weight: 300; color: #F0F0F0; opacity: 1; transition: opacity 0.3s ease;}
+input::-moz-placeholder                 {font-weight: 300; color: #F0F0F0; opacity: 1; transition: opacity 0.3s ease;}
+input:-moz-placeholder                  {font-weight: 300; color: #F0F0F0; opacity: 1; transition: opacity 0.3s ease;}
+input:-ms-input-placeholder             {font-weight: 300; color: #F0F0F0; opacity: 1; transition: opacity 0.3s ease;}
 input:focus::-webkit-input-placeholder  {opacity: 0; transition: opacity 0.3s ease;}
 input:focus::-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
 input:focus:-moz-placeholder            {opacity: 0; transition: opacity 0.3s ease;}
 input:focus:-ms-input-placeholder       {opacity: 0; transition: opacity 0.3s ease;}
-textarea::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
-textarea::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
-textarea:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
-textarea:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+textarea::-webkit-input-placeholder       {font-weight: 300; color: #F0F0F0; opacity: 1; transition: opacity 0.3s ease;}
+textarea::-moz-placeholder                {font-weight: 300; color: #F0F0F0; opacity: 1; transition: opacity 0.3s ease;}
+textarea:-moz-placeholder                 {font-weight: 300; color: #F0F0F0; opacity: 1; transition: opacity 0.3s ease;}
+textarea:-ms-input-placeholder            {font-weight: 300; color: #F0F0F0; opacity: 1; transition: opacity 0.3s ease;}
 textarea:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
 textarea:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
 textarea:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
@@ -61,6 +61,13 @@ textarea:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s 
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
+    min-height: 100%;
+}
+.wrapper:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 560px;
 }
     .wrap-box {
         max-width: 1000px;
@@ -393,6 +400,8 @@ main {
 
             .list-three-columns {
                 overflow: hidden;
+            }
+            .block-list .list-three-columns {
                 margin-top: 36px;
             }
                 .list-three-columns li {
@@ -403,14 +412,119 @@ main {
                 .list-three-columns li:first-child {
                     margin-left: 0;
                 }
-                    .list-three-columns img {
+                    .block-list .list-three-columns img {
                         width: 311px;
                         height: 223px;
                         cursor: pointer;
                     }
+
+    .wrap-register {
+        height: 440px;
+        line-height: 429px;
+        background: url("../images/register_bg.jpg") no-repeat center;
+        background-size: cover;
+        text-align: center;
+    }
+        .register-box {
+            display: inline-block;
+            vertical-align: middle;
+            line-height: normal;
+            text-align: left;
+            color: #ffffff;
+        }
+            .register-box h2 {
+                margin-bottom: 3px;
+                margin-left: 8px;
+                font: 400 22px 'Montserrat', 'Open Sans', sans-serif;
+            }
+                .register-form legend {
+                    margin-bottom: 10px;
+                    margin-left: 8px;
+                    font-size: 14px;
+                }
+                    .list-imputs li {
+                        margin-top: 12px;
+                    }
+                    .list-imputs li:first-child {
+                        margin-top: 0;
+                    }
+                        .list-imputs input {
+                            width: 256px;
+                            padding: 0 10px;
+                            background: none;
+                            border: 2px solid #ffffff;
+                            font: 400 14px 'Open Sans', sans-serif;
+                            line-height: 35px;
+                            color: #ffffff;
+                        }
+                        .list-imputs input[type="submit"] {
+                            width: 280px;
+                            padding: 0;
+                            border-color: #FFB706;
+                            text-transform: uppercase;
+                            font-family: 'Montserrat', 'Open Sans', sans-serif;
+                            text-align: center;
+                            color: #FFB706;
+                        }
+
+    .reviews-box {
+        padding: 43px 0;
+        background: #225C7B;
+    }
+        .reviews-box .wrap-box {
+            padding: 0 20px;
+        }
+            .review-text {
+                min-height: 147px;
+                padding: 24px 16px;
+                background: url("../images/quote.png") no-repeat 234px 13px #ffffff;
+                margin-bottom: 2px;
+            }
+                .review-text h3 {
+                    margin-bottom: 14px;
+                    font: 400 24px 'Montserrat', 'Open Sans', sans-serif;
+                }
+                .review-text p {
+                    line-height: 19px;
+                }
+
+            .review-author {
+                min-height: 46px;
+                padding: 8px 10px;
+                background: #ffffff;
+            }
+                .review-author span {
+                    font: 400 16px 'Open Sans', sans-serif;
+                    line-height: 19px;
+                    font-style: italic;
+                }
+                .author-photo {
+                    float: left;
+                    overflow: hidden;
+                    width: 47px;
+                    height: 46px;
+                    margin-right: 16px;
+                    -webkit-border-radius: 24px;
+                    -moz-border-radius: 24px;
+                    border-radius: 24px;
+                }
+                    .author-photo img {
+                        width: 47px;
+                        height: 46px;
+                    }
+                span.about-author {
+                    display: block;
+                    font-weight: 300;
+                }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------FOOTER---------------------------------------*/
 /*----------------------------------------------------------------------------------*/
+.wrap-footer {
+    overflow: hidden;
+    max-width: 1200px;
+    width: 100%;
+    margin: -560px auto 0;
+}
 .footer {
     position: relative;
 }
