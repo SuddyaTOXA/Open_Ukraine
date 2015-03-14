@@ -10,6 +10,7 @@
     <link href='http://fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="styles/responsiveslides.css">
 </head>
 
@@ -28,6 +29,20 @@
                         <ul>
                             <li class="active">
                                 <a href="index.html">Home</a>
+
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="culture.html">Culture</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="religion.html">Religion</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">News</a>
+                                    </li>
+                                </ul>
                             </li>
 
                             <li>
@@ -68,20 +83,6 @@
 
                             <li>
                                 <a href="join.html">Join</a>
-
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="culture.html">Culture</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="religion.html">Religion</a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#">News</a>
-                                    </li>
-                                </ul>
                             </li>
                         </ul>
                     </nav><!--end NAVIGATION-->
@@ -170,6 +171,32 @@
 
             <div class="wrap-form">
                 <div class="wrap-box">
+                    <div class="wrap-copy">
+                        <p class="copyright">Copyrights enim ad minim veniam, quis nostrud exerci tation ullamcorper
+                            suscipit lobortis nisl ut aliquip iusto odio dignissim qui blandit praesent lupt.</p>
+
+                        <ul class="list-social">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-facebook"></i>
+                                    Facebook
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-twitter"></i>
+                                    Twitter
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-youtube-play"></i>
+                                    YouTube
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
                     <form class="feedback-form" name="feedback" method="post">
                         <fieldset>
                             <legend>Get in touch</legend>
@@ -203,7 +230,8 @@
             var mapOptions = {
                 center: new google.maps.LatLng(48.4705052,31.2268153),
                 zoom: 6,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                disableDefaultUI: true
             }
 
             // Get the HTML DOM element that will contain your map
