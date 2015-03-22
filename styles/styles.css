@@ -520,6 +520,82 @@ main {
                     display: block;
                     font-weight: 300;
                 }
+
+    .single-content {
+        padding-top: 30px;
+        text-align: center;
+    }
+        .single-content p {
+            max-width: 630px;
+            width: 100%;
+            padding: 0 20px;
+            margin: 0 auto 17px;
+            line-height: 19px;
+            text-align: justify;
+        }
+        .single-content a {
+            color: #225A7E;
+        }
+        .single-content img {
+            width: 50%;
+            height: 300px;
+            margin: 0 -5px 17px 0;
+        }
+        .single-content blockquote {
+            position: relative;
+            max-width: 630px;
+            width: 100%;
+            padding: 28px 0 38px;
+            margin: 0 auto 26px;
+            background: #225C7B;
+            font-size: 22px;
+            font-style: italic;
+            line-height: 26px;
+            color: #FFFFFF;
+
+            -webkit-box-shadow: -285px 0 0 0 #225C7B, 285px 0 0 0 #225C7B;
+            -moz-box-shadow: -285px 0 0 0 #225C7B, 285px 0 0 0 #225C7B;
+            box-shadow: -285px 0 0 0 #225C7B, 285px 0 0 0 #225C7B;
+        }
+            .single-content blockquote:before,
+            .single-content blockquote:after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 13px;
+                left: -98px;
+                width: 57px;
+                height: 46px;
+                background: url("../images/blockquote_before.png") no-repeat center transparent;
+            }
+            .single-content blockquote:after {
+                top: inherit;
+                left: inherit;
+                bottom: 13px;
+                right: -98px;
+                background-image: url("../images/blockquote_after.png");
+            }
+        .single-author {
+            position: relative;
+            max-width: 630px;
+            width: 100%;
+            margin: -7px auto 0;
+            padding-bottom: 13px;
+        }
+            .single-author:before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 2px;
+                width: 142px;
+                background: #225C7B;
+            }
+            .single-author span {
+                font-style: italic;
+                line-height: 42px;
+            }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------FOOTER---------------------------------------*/
 /*----------------------------------------------------------------------------------*/
@@ -527,7 +603,7 @@ main {
     overflow: hidden;
     max-width: 1200px;
     width: 100%;
-    margin: -560px auto 0;
+    margin: -615px auto 0;
 }
 .footer {
     position: relative;
