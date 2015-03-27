@@ -523,12 +523,18 @@ main {
                 max-width: 442px;
                 width: 100%;
                 margin: 0 0 8px 40px;
-                font: 400 24px 'Montserrat', 'Open Sans', sans-serif;
             }
-            .where-list .even h2 {
+            .where-list .even .where-text h2 {
                 float: right;
                 margin: 0 40px 8px 0;
             }
+                .where-text h2 a {
+                    text-decoration: none;
+                    font: 400 24px 'Montserrat', 'Open Sans', sans-serif;
+                }
+                .where-list .even .where-text h2 a {
+                    color: #ffffff;
+                }
 
             .where-text p {
                 max-width: 442px;
@@ -635,16 +641,14 @@ main {
                     }
                         .list-imputs input {
                             width: 256px;
-                            padding: 0 10px;
+                            padding: 8px 10px;
                             background: none;
                             border: 2px solid #ffffff;
                             font: 400 14px 'Open Sans', sans-serif;
-                            line-height: 35px;
                             color: #ffffff;
                         }
                         .list-imputs input[type="submit"] {
                             width: 280px;
-                            padding: 0;
                             border-color: #FFB706;
                             text-transform: uppercase;
                             font-family: 'Montserrat', 'Open Sans', sans-serif;
