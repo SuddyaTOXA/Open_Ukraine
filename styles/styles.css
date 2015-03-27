@@ -491,6 +491,7 @@ main {
     .where-list li {
         overflow: hidden;
         width: 100%;
+        max-height: 450px;
         clear: both;
         background: #ffffff;
     }
@@ -502,13 +503,21 @@ main {
             float: left;
             max-width: 600px;
             width: 100%;
+            max-height: 450px;
         }
         .where-list .even .where-img {
             float: right;
         }
+            .where-img img {
+                max-height: 450px;
+                width: 100%;
+                margin-bottom: -5px;
+            }
         .where-text {
             overflow: hidden;
-            padding: 55px 0;
+            padding: 55px 0 10px;
+            max-height: 450px;
+            box-sizing: border-box;
         }
             .where-text h2 {
                 max-width: 442px;
@@ -524,15 +533,21 @@ main {
             .where-text p {
                 max-width: 442px;
                 width: 100%;
-                margin: 0 0 19px 40px;
+                margin: 0 0 17px 40px;
                 line-height: 19px;
             }
             .where-list .even p {
                 float: right;
-                margin: 0 40px 19px 0;
+                margin: 0 40px 17px 0;
             }
-            .where-text p:last-of-type {
-                margin-bottom: 0;
+            .read-more-box {
+                max-width: 442px;
+                width: 100%;
+                margin: 0 0 0 40px;
+            }
+            .where-list .even .read-more-box {
+                float: right;
+                margin: 0 40px 0 0;
             }
                 a.read-more {
                     font-weight: 700;
@@ -787,6 +802,137 @@ main {
                 font-style: italic;
                 line-height: 42px;
             }
+
+
+    .wrap-results {
+        padding: 0 20px;
+    }
+        .search-info {
+            padding: 12px 0 4px;
+            text-transform: uppercase;
+            font: 400 12px 'Montserrat', 'Open Sans', sans-serif;
+            color: #8F8F8F;
+        }
+        .list-results {
+            padding-bottom: 26px;
+        }
+            .list-results li {
+                max-width: 650px;
+                width: 100%;
+                padding-bottom: 18px;
+            }
+                .list-results h2 a {
+                    text-decoration: none;
+                    font: 400 24px 'Montserrat', 'Open Sans', sans-serif;
+                    color: #205A79;
+                }
+                .list-results h2 a:hover {
+                    text-decoration: underline;
+                }
+
+                .result-content p {
+                    line-height: 19px;
+                }
+        .pagination {
+            text-align: center;
+            padding: 0 0 33px;
+        }
+            .list-pagination {
+                position: relative;
+                display: inline-block;
+                padding: 0 80px;
+                border: 2px solid #215479;
+                text-align: center;
+                font: 400 18px 'Montserrat', 'Open Sans', sans-serif;
+                color: #21527D;
+            }
+                .list-pagination li {
+                    display: inline-block;
+                }
+                    .list-pagination a {
+                        display: block;
+                        padding: 5px 2px;
+                        text-decoration: none;
+                        font: 400 18px 'Montserrat', 'Open Sans', sans-serif;
+                        color: #21527D;
+
+                        -webkit-transition: 0.2s;
+                        -moz-transition: 0.2s;
+                        -o-transition: 0.2s;
+                        transition: 0.2s;
+                    }
+                        .list-pagination a:hover {
+                            color: #FEB800;
+                            text-decoration: none;
+                        }
+                    .list-pagination .current {
+                        color: #444444;
+                    }
+                    .pagination .current,
+                    .pagination .dots {
+                        display: inline-table;
+                        padding: 5px 2px;
+                    }
+                .prev,
+                .next {
+                    display: block;
+                    position: absolute;
+                    top: -2px;
+                    height: 32px;
+                    width: 32px;
+                    border: 2px solid #215479;
+                    text-align: center;
+                    line-height: 32px;
+                }
+                .prev {left: -2px;}
+                .next {right: -2px;}
+                    .prev a,
+                    .next a {
+                        font-size: 30px;
+                        line-height: 32px;
+                        padding: 0;
+                    }
+                    .prev a {padding-right: 3px;}
+                    .next a {padding-left: 3px;}
+                        .prev a:hover,
+                        .next a:hover {
+                            background: #215479;
+                        }
+
+    .wrap-no-results {
+        padding: 30px 20px 80px;
+        text-align: center;
+    }
+        .no-results-info {
+            margin-bottom: 28px;
+            text-transform: uppercase;
+            font: 400 12px 'Montserrat', 'Open Sans', sans-serif;
+            color: #8F8F8F;
+        }
+        .no-results-img {
+            max-width: 960px;
+            margin-bottom: 20px;
+        }
+
+    .wrap-error {
+        padding: 30px 20px 80px;
+        text-align: center;
+    }
+        .error-404-img {
+            max-width: 960px;
+            margin-bottom: 20px;
+        }
+            .error-text-header {
+                margin-bottom: 8px;
+                font: 400 24px 'Montserrat', 'Open Sans', sans-serif;
+                color: #1F5979;
+            }
+        .error-number {
+            display: block;
+            margin-bottom: 24px;
+            font: 400 200px 'Montserrat', 'Open Sans', sans-serif;
+            color: #A7BECA;
+        }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------FOOTER---------------------------------------*/
 /*----------------------------------------------------------------------------------*/

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <title>News | Open Ukraine</title>
+    <title>Error 404: Not Found | Open Ukraine</title>
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=1024, user-scalable=yes">
@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
 </head>
 
-<body class="inner news">
+<body class="inner error-404">
     <div class="wrapper">
         <header class="header">
             <div class="top-header">
@@ -106,61 +106,22 @@
         <section class="wrap-page-title">
             <div class="wrap-box">
                 <header>
-                    <h1>News</h1>
+                    <h1>There’s nothing here</h1>
                 </header>
 
-                <p>description</p>
+                <p>We so sorry</p>
             </div>
         </section>
 
         <main class="main-content">
-            <ul class="where-list">
-                <li>
-                    <div class="where-img">
-                        <img src="images/where_1.jpg" alt="where">
-                    </div>
+            <div class="wrap-error wrap-box">
+                <img src="images/404_error.jpg" class="error-404-img" alt="error_404">
 
-                    <div class="where-text">
-                        <h2>News of culture</h2>
-
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                            tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-
-                        <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
-                            nisl ut aliquip ex ea commodo consequat.</p>
-
-                        <p>Vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
-                            qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-
-                        <div class="read-more-box">
-                            <a href="#" class="read-more">Read More</a>
-                        </div>
-                    </div>
-                </li>
-
-                <li class="even">
-                    <div class="where-img">
-                        <img src="images/where_2.jpg" alt="where">
-                    </div>
-
-                    <div class="where-text">
-                        <h2>News of religion</h2>
-
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                            tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-
-                        <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis
-                            nisl ut aliquip ex ea commodo consequat.</p>
-
-                        <p>Vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim
-                            qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-
-                        <div class="read-more-box">
-                            <a href="#" class="read-more">Read More</a>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+                <div class="error-text">
+                    <p class="error-text-header">Did you try searching?</p>
+                    <p>Click the search icon above and enter one or more keywords.</p>
+                </div>
+            </div><!--end WRAP-404-->
         </main>
     </div><!--end WRAPPER-->
 
@@ -251,8 +212,8 @@
             // Display area markers
             var latlngbounds = new google.maps.LatLngBounds();
 
-            var image = new google.maps.MarkerImage( '',
-                    new google.maps.Size(46,66), // icon sizes
+            var image = new google.maps.MarkerImage( 'images/pointer1.png',
+                    new google.maps.Size(76,77), // icon sizes
                     new google.maps.Point(0,0),
                     new google.maps.Point(7,36)
             );
@@ -270,7 +231,7 @@
             }
         }
         var places = [
-            ['Ukraine',48.4705052,31.2268153]
+            ['Ukraine',50.433394,30.5218614]
         ];
     </script>
 </body>
